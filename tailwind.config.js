@@ -11,7 +11,10 @@ export const theme = {
     fontFamily: {
       'sans': ["Josefin Sans", "ui-sans-serif", "system-ui", "sans-serif"],
       'alata': ["Alata", "ui-sans-serif", "system-ui", "sans-serif"],
-    }
+    },
+    letterSpacing: {
+      widest: '0.3em'
+    },
   },
 };
 export const plugins = [];
