@@ -30,6 +30,7 @@
         <div class="copntainer max-w-6xl mx-auto px-6 py-12">
           <nav class="flex items-center justify-between text-white">
             <img src="./images/logo.svg" alt="" />
+            <!-- ToDo: This should be an ul with li -->
             <div class="hidden h-10 font-alata md:flex md:space-x-8">
               <div class="group">
                 <a href="#">About</a>
@@ -228,6 +229,80 @@
           </div>
         </div>
       </section>
+
+      <footer class="bg-black font-alata">
+        <div class="container max-w-6xl py-10 mx-auto">
+          <!-- footer content flex container -->
+          <div class="flex flex-col items-center mb-8 space-y-6 md:flex-row md:space-y-0 md:justify-between md:items-start">
+            <!-- logo and footer nav container -->
+            <div class="flex flex-col items-center space-y-8 md:items-start md:space-y-4">
+              <div class="h-8">
+                <img src="./images/logo.svg" alt="" class="w-44 md:ml-3">
+              </div>
+              <!-- footer menu container -->
+              <nav>
+                <ul class="flex flex-col items-center space-y-4 text-white md:flex-row md:space-y-0 md:space-x-6 md:ml-3">
+                  <li class="h-10 group">
+                    <a href="#">About</a>
+                    <div class="mx-2 group-hover:border-b-2 group-hover:border-white"></div>
+                  </li>
+                  <li class="h-10 group">
+                    <a href="#">Careers</a>
+                    <div class="mx-2 group-hover:border-b-2 group-hover:border-white"></div>
+                  </li>
+                  <li class="h-10 group">
+                    <a href="#">Events</a>
+                    <div class="mx-2 group-hover:border-b-2 group-hover:border-white"></div>
+                  </li>
+                  <li class="h-10 group">
+                    <a href="#">Products</a>
+                    <div class="mx-2 group-hover:border-b-2 group-hover:border-white"></div>
+                  </li>
+                  <li class="h-10 group">
+                    <a href="#">Support</a>
+                    <div class="mx-2 group-hover:border-b-2 group-hover:border-white"></div>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <!-- socials and copyright container -->
+            <div class="flex flex-col items-start justify-between space-y-4 text-gray-500">
+              <!-- social icon list -->
+              <ul class="flex items-center justify-center mx-auto space-x-4 md:mx-0 md:justify-end">
+                <li class="mx-2 group">
+                  <a href="#">
+                    <img src="./images/icon-facebook.svg" alt="facebook logo">
+                    <div class="w-0 mt-1 h-1 bg-white rounded-md group-hover:w-full transition-all"></div>
+                  </a>
+                </li>
+                <li class="mx-2 group">
+                  <a href="#">
+                    <img src="./images/icon-twitter.svg" alt="">
+                    <div class="w-0 mt-1 h-1 bg-white rounded-md group-hover:w-full transition-all"></div>
+                  </a>
+                </li>
+                <li class="mx-2 group">
+                  <a href="#">
+                    <img src="./images/icon-pinterest.svg" alt="">
+                    <div class="w-0 mt-1 h-1 bg-white rounded-md group-hover:w-full transition-all"></div>
+                  </a>
+                </li>
+                <li class="mx-2 group">
+                  <a href="#">
+                    <img src="./images/icon-instagram.svg" alt="">
+                    <div class="w-0 mt-1 h-1 bg-white rounded-md group-hover:w-full transition-all"></div>
+                  </a>
+                </li>
+              </ul>
+              <!-- copyright -->
+              <span class="text-sm">
+                &copy 2024 Loopstudios. All rights reserved.
+              </span>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
 
   <!--  
