@@ -56,7 +56,6 @@
   transform: rotate(-45deg) translateY(6px) translateX(-6px);
 }
 
-/* ToDo: swap these - make mobile default, desktop w/media query */
 .hero-section {
   background-image: url('../images/desktop/image-hero.jpg');
   background-repeat: no-repeat;

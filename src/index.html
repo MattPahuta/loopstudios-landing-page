@@ -23,69 +23,67 @@
     <title>Loopstudios</title>
   </head>
   <body>
-    <main>
-      <!-- Hero Section ToDo: make this a header section, move above main -->
-      <section id="hero" class="hero-section">
-        <!-- hero container -->
-        <nav class="copntainer max-w-6xl mx-auto px-6 py-12">
-          <nav class="flex items-center justify-between text-white">
-            <img src="./images/logo.svg" alt=""class="z-50 h-6 md:h-8" />
-            <ul class="hidden h-10 font-alata md:flex md:space-x-8">
-              <li class="group">
-                <a href="#">About</a>
-                <div
-                  class="mx-2 group-hover:border-b-2 group-hover:border-blue-50"></div>
-              </li>
-              <li class="group">
-                <a href="#">Careers</a>
-                <div
-                  class="mx-3 group-hover:border-b-2 group-hover:border-blue-50"></div>
-              </li>
-              <li class="group">
-                <a href="#">Events</a>
-                <div
-                  class="mx-3 group-hover:border-b-2 group-hover:border-blue-50"></div>
-              </li>
-              <li class="group">
-                <a href="#">Products</a>
-                <div
-                  class="mx-3 group-hover:border-b-2 group-hover:border-blue-50"></div>
-              </li>
-              <li class="group">
-                <a href="#">Support</a>
-                <div
-                  class="mx-3 group-hover:border-b-2 group-hover:border-blue-50"></div>
-              </li>
-            </ul>
-            <!-- hamburger menu -->
-            <div class="md:hidden">
-              <!-- ToDo: better align lines within button -->
-              <button id="menu-btn" class="z-40 block hamburger md:hidden">
-                <span class="hamburger-top"></span>
-                <span class="hamburger-middle"></span>
-                <span class="hamburger-bottom"></span>
-              </button>
-            </div>
-          </nav>
-          <!-- mobile menu -->
-          <nav>
-            <ul id="menu" class="absolute top-0 bottom-0 left-0 hidden flex-col self-end w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-2xl font-thin text-white uppercase bg-black">
-              <li><a href="#" class="hover:text-fuchsia-500 hover:font-normal">About</a></li>
-              <li><a href="#" class="hover:text-fuchsia-500 hover:font-normal">Careers</a></li>
-              <li><a href="#" class="hover:text-fuchsia-500 hover:font-normal">Events</a></li>
-              <li><a href="#" class="hover:text-fuchsia-500 hover:font-normal">Products</a></li>
-              <li><a href="#" class="hover:text-fuchsia-500 hover:font-normal">Support</a></li>
-            </ul>
-          </nav>
-          <div
-            class="max-w-lg mt-32 mb-32 p-4 border-2 md:max-w-2xl md:p-10 md:m-32 md:mx-0">
-            <h1
-              class="font-sans font-light leading-none text-[40px] text-white uppercase md:text-7xl">
-              Immersive experiences that deliver
-            </h1>
+    <header id="hero" class="hero-section">
+      <!-- hero container -->
+      <nav class="copntainer max-w-6xl mx-auto px-6 py-12">
+        <nav class="flex items-center justify-between text-white">
+          <img src="./images/logo.svg" alt=""class="z-50 h-6 md:h-8" />
+          <ul class="hidden h-10 font-alata md:flex md:space-x-8">
+            <li class="group">
+              <a href="#">About</a>
+              <div
+                class="mx-2 group-hover:border-b-2 group-hover:border-blue-50"></div>
+            </li>
+            <li class="group">
+              <a href="#">Careers</a>
+              <div
+                class="mx-3 group-hover:border-b-2 group-hover:border-blue-50"></div>
+            </li>
+            <li class="group">
+              <a href="#">Events</a>
+              <div
+                class="mx-3 group-hover:border-b-2 group-hover:border-blue-50"></div>
+            </li>
+            <li class="group">
+              <a href="#">Products</a>
+              <div
+                class="mx-3 group-hover:border-b-2 group-hover:border-blue-50"></div>
+            </li>
+            <li class="group">
+              <a href="#">Support</a>
+              <div
+                class="mx-3 group-hover:border-b-2 group-hover:border-blue-50"></div>
+            </li>
+          </ul>
+          <!-- hamburger menu -->
+          <div class="md:hidden">
+            <button id="menu-btn" class="z-40 hamburger md:hidden">
+              <span class="hamburger-top"></span>
+              <span class="hamburger-middle"></span>
+              <span class="hamburger-bottom"></span>
+            </button>
           </div>
+        </nav>
+        <!-- mobile menu -->
+        <nav>
+          <ul id="menu" class="absolute top-0 bottom-0 left-0 hidden flex-col self-end w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-2xl font-thin text-white uppercase bg-black">
+            <li><a href="#" class="hover:text-fuchsia-500 hover:font-normal">About</a></li>
+            <li><a href="#" class="hover:text-fuchsia-500 hover:font-normal">Careers</a></li>
+            <li><a href="#" class="hover:text-fuchsia-500 hover:font-normal">Events</a></li>
+            <li><a href="#" class="hover:text-fuchsia-500 hover:font-normal">Products</a></li>
+            <li><a href="#" class="hover:text-fuchsia-500 hover:font-normal">Support</a></li>
+          </ul>
+        </nav>
+        <div
+          class="max-w-lg mt-32 mb-32 p-4 border-2 md:max-w-2xl md:p-10 md:m-32 md:mx-0">
+          <h1
+            class="font-sans font-light leading-none text-[40px] text-white uppercase md:text-7xl">
+            Immersive experiences that deliver
+          </h1>
         </div>
-      </section>
+      </div>
+    </header>
+    <main>
       <!-- Featured content -->
       <section id="feature">
         <div
@@ -124,12 +122,10 @@
               class="text-4xl font-light text-center uppercase md:text-left md:text-5xl">
               Our creations
             </h2>
-            <!-- ToDo: add transition duration for hover -->
             <button class="hidden btn md:block">See all</button>
           </header>
           <!-- top images grid container -->
           <div class="image-grid-container">
-            <!-- image 1 -->
             <div class="group relative overflow-hidden md:w-1/4">
               <picture>
                 <source
@@ -137,12 +133,9 @@
                   srcset="./images/desktop/image-deep-earth.jpg" />
                 <img src="./images/mobile/image-deep-earth.jpg" alt="" class="w-full duration-200 group-hover:scale-110"/>
               </picture>
-              <!-- image overlay -->
               <div class="image-overlay"></div>
-              <!-- image text -->
               <h3 class="image-title">Deep earth</h3>
             </div>
-            <!-- image 2 -->
             <div class="group relative overflow-hidden md:w-1/4">
               <picture>
                 <source
@@ -150,12 +143,9 @@
                   srcset="./images/desktop/image-night-arcade.jpg" />
                 <img src="./images/mobile/image-night-arcade.jpg" alt="" class="w-full duration-200 group-hover:scale-110"/>
               </picture>
-              <!-- image overlay -->
               <div class="image-overlay"></div>
-              <!-- image text -->
               <h3 class="image-title">Night arcade</h3>
             </div>
-            <!-- image 3 -->
             <div class="group relative overflow-hidden md:w-1/4">
               <picture>
                 <source
@@ -163,12 +153,10 @@
                   srcset="./images/desktop/image-soccer-team.jpg" />
                 <img src="./images/mobile/image-soccer-team.jpg" alt="" class="w-full duration-200 group-hover:scale-110"/>
               </picture>
-              <!-- image overlay -->
+  
               <div class="image-overlay"></div>
-              <!-- image text -->
               <h3 class="image-title">Soccer team vr</h3>
             </div>
-            <!-- image 4 -->
             <div class="group relative overflow-hidden md:w-1/4">
               <picture>
                 <source
@@ -176,16 +164,13 @@
                   srcset="./images/desktop/image-grid.jpg" />
                 <img src="./images/mobile/image-grid.jpg" alt="" class="w-full duration-200 group-hover:scale-110"/>
               </picture>
-              <!-- image overlay -->
               <div class="image-overlay"></div>
-              <!-- image text -->
               <h3 class="image-title">The grid</h3>
             </div>
 
           </div>
           <!-- bottom images grid container -->
           <div class="image-grid-container mt-10">
-            <!-- image 5 -->
             <div class="group relative overflow-hidden md:w-1/4">
               <picture>
                 <source
@@ -193,12 +178,9 @@
                   srcset="./images/desktop/image-from-above.jpg" />
                 <img src="./images/mobile/image-from-above.jpg" alt="" class="w-full duration-200 group-hover:scale-110"/>
               </picture>
-              <!-- image overlay -->
               <div class="image-overlay"></div>
-              <!-- image text -->
               <h3 class="image-title">From up above vr</h3>
             </div>
-            <!-- image 6 -->
             <div class="group relative overflow-hidden md:w-1/4">
               <picture>
                 <source
@@ -206,12 +188,9 @@
                   srcset="./images/desktop/image-pocket-borealis.jpg" />
                 <img src="./images/mobile/image-pocket-borealis.jpg" alt="" class="w-full duration-200 group-hover:scale-110"/>
               </picture>
-              <!-- image overlay -->
               <div class="image-overlay"></div>
-              <!-- image text -->
               <h3 class="image-title">Pocket borealis</h3>
             </div>
-            <!-- image 7 -->
             <div class="group relative overflow-hidden md:w-1/4">
               <picture>
                 <source
@@ -219,12 +198,9 @@
                   srcset="./images/desktop/image-curiosity.jpg" />
                 <img src="./images/mobile/image-curiosity.jpg" alt="" class="w-full duration-200 group-hover:scale-110"/>
               </picture>
-              <!-- image overlay -->
               <div class="image-overlay"></div>
-              <!-- image text -->
               <h3 class="image-title">The curiosity</h3>
             </div>
-            <!-- image 8 -->
             <div class="group relative overflow-hidden md:w-1/4">
               <picture>
                 <source
@@ -232,20 +208,16 @@
                   srcset="./images/desktop/image-fisheye.jpg" />
                 <img src="./images/mobile/image-fisheye.jpg" alt="" class="w-full duration-200 group-hover:scale-110"/>
               </picture>
-              <!-- image overlay -->
               <div class="image-overlay"></div>
-              <!-- image text -->
               <h3 class="image-title">Make it fisheye</h3>
             </div>
 
           </div>
-          <!-- see all button container -->
           <div class="flex justify-center mt-10 md:hidden">
             <button class="btn w-full md:hidden">see all</button>
           </div>
         </div>
       </section>
-
       <footer class="bg-black font-alata">
         <div class="container max-w-6xl py-10 mx-auto">
           <!-- footer content flex container -->
@@ -281,10 +253,8 @@
                 </ul>
               </nav>
             </div>
-
             <!-- socials and copyright container -->
             <div class="flex flex-col items-start justify-between space-y-4 text-gray-500">
-              <!-- social icon list -->
               <ul class="flex items-center justify-center mx-auto space-x-4 md:mx-0 md:justify-end">
                 <li class="mx-2 group">
                   <a href="#">
@@ -311,7 +281,6 @@
                   </a>
                 </li>
               </ul>
-              <!-- copyright -->
               <span class="text-sm">
                 &copy 2024 Loopstudios. All rights reserved.
               </span>
