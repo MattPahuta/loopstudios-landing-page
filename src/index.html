@@ -25,10 +25,21 @@
   <body>
     <header id="hero" class="hero-section">
       <!-- hero container -->
-      <nav class="copntainer max-w-6xl mx-auto px-6 py-12">
-        <nav class="flex items-center justify-between text-white">
-          <img src="./images/logo.svg" alt=""class="z-50 h-6 md:h-8" />
-          <ul class="hidden h-10 font-alata md:flex md:space-x-8">
+      <div class="container max-w-6xl mx-auto px-6 py-12">
+
+        <nav class="flex flex-col md:flex-row md:items-center md:justify-between">
+          <div class="flex items-center justify-between">
+            <div>
+              <img src="./images/logo.svg" alt=""class="h-6 md:h-8" />
+            </div>
+            <!-- ToDo: This needs to be a button element -->
+            <div class="burger md:hidden">
+              <div class="bar1 h-1 w-7 my-1.5 bg-white duration-300"></div>
+              <div class="bar2 h-1 w-7 my-1.5 bg-white"></div>
+              <div class="bar3 h-1 w-7 my-1.5 bg-white duration-300"></div>
+            </div>
+          </div>
+          <ul class="links hidden text-white h-10 font-sans text-2xl font-thin uppercase md:flex md:space-x-8 md:font-alata md:text-base">
             <li class="group">
               <a href="#">About</a>
               <div
@@ -55,17 +66,44 @@
                 class="mx-3 group-hover:border-b-2 group-hover:border-blue-50"></div>
             </li>
           </ul>
-          <!-- hamburger menu -->
-          <div class="md:hidden">
-            <button id="menu-btn" class="z-40 hamburger md:hidden">
-              <span class="hamburger-top"></span>
-              <span class="hamburger-middle"></span>
-              <span class="hamburger-bottom"></span>
-            </button>
-          </div>
         </nav>
+
+        <!-- <div class="flex items-center justify-between">
+          <img src="./images/logo.svg" alt=""class="h-6 md:h-8" />
+          <nav class="flex items-center justify-between text-white">
+            <div class="topnav__menu">
+              <ul class="h-10 font-sans text-2xl font-thin uppercase md:flex md:space-x-8">
+                <li class="group">
+                  <a href="#">About</a>
+                  <div
+                    class="mx-2 group-hover:border-b-2 group-hover:border-blue-50"></div>
+                </li>
+                <li class="group">
+                  <a href="#">Careers</a>
+                  <div
+                    class="mx-3 group-hover:border-b-2 group-hover:border-blue-50"></div>
+                </li>
+                <li class="group">
+                  <a href="#">Events</a>
+                  <div
+                    class="mx-3 group-hover:border-b-2 group-hover:border-blue-50"></div>
+                </li>
+                <li class="group">
+                  <a href="#">Products</a>
+                  <div
+                    class="mx-3 group-hover:border-b-2 group-hover:border-blue-50"></div>
+                </li>
+                <li class="group">
+                  <a href="#">Support</a>
+                  <div
+                    class="mx-3 group-hover:border-b-2 group-hover:border-blue-50"></div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div> -->
         <!-- mobile menu -->
-        <nav>
+        <!-- <nav>
           <ul id="menu" class="absolute top-0 bottom-0 left-0 hidden flex-col self-end w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-2xl font-thin text-white uppercase bg-black">
             <li><a href="#" class="hover:text-fuchsia-500 hover:font-normal">About</a></li>
             <li><a href="#" class="hover:text-fuchsia-500 hover:font-normal">Careers</a></li>
@@ -73,7 +111,8 @@
             <li><a href="#" class="hover:text-fuchsia-500 hover:font-normal">Products</a></li>
             <li><a href="#" class="hover:text-fuchsia-500 hover:font-normal">Support</a></li>
           </ul>
-        </nav>
+        </nav> -->
+
         <div
           class="max-w-lg mt-32 mb-32 p-4 border-2 md:max-w-2xl md:p-10 md:m-32 md:mx-0">
           <h1
@@ -81,6 +120,7 @@
             Immersive experiences that deliver
           </h1>
         </div>
+
       </div>
     </header>
     <main>

@@ -8,7 +8,15 @@
   }
 }
 
-
+/* Mobile-Desktop Nav */
+/* @media (max-width: 768px) {
+  .topnav__menu {
+    position: fixed;
+    inset: 0;
+    padding: 1.5rem;
+    background-color: blue;
+  }
+} */
 
 /* hamburger mobile menu */
 .hamburger {
