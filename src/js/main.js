@@ -1,23 +1,25 @@
 const btnOpen = document.querySelector('#btnOpen');
 const btnClose = document.querySelector('#btnClose');
-const media = window.matchMedia('(width < 48rem)');
+const media = window.matchMedia('(width < 48em)');
 const topNavMenu = document.querySelector('.topnav__menu');
 const body = document.querySelector('body');
 
+
 function openMobileMenu() {
+  console.log('open button clicked');
   btnOpen.setAttribute('aria-expanded', 'true');
   topNavMenu.removeAttribute('inert');
   topNavMenu.removeAttribute('style');
   bodyScrollLockUpgrade.disableBodyScroll(body);
-  btnOpen.focus();
+  btnClose.focus();
 }
 
 function closeMobileMenu() {
+  console.log('close button clicked');
   btnOpen.setAttribute('aria-expanded', 'false');
   topNavMenu.setAttribute('inert', '');
-
   bodyScrollLockUpgrade.enableBodyScroll(body);
-  btnClose.focus();
+  btnOpen.focus();
 
   setTimeout(() => {
     topNavMenu.style.transition = 'none';
@@ -43,6 +45,6 @@ setupTopNav(media);
 btnOpen.addEventListener('click', openMobileMenu);
 btnClose.addEventListener('click', closeMobileMenu);
 
-media.addEventListener('change', function(e) {
+media.addEventListener('change', function (e) {
   setupTopNav(e);
 });

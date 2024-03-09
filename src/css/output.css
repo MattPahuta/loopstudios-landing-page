@@ -595,12 +595,32 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.fixed {
+  position: fixed;
+}
+
 .relative {
   position: relative;
 }
 
+.inset-0 {
+  inset: 0px;
+}
+
 .top-48 {
   top: 12rem;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.m-0 {
+  margin: 0px;
 }
 
 .mx-2 {
@@ -639,8 +659,8 @@ video {
   margin-bottom: 2rem;
 }
 
-.mt-1 {
-  margin-top: 0.25rem;
+.ms-auto {
+  margin-inline-start: auto;
 }
 
 .mt-10 {
@@ -649,6 +669,10 @@ video {
 
 .mt-32 {
   margin-top: 8rem;
+}
+
+.block {
+  display: block;
 }
 
 .flex {
@@ -663,10 +687,6 @@ video {
   display: none;
 }
 
-.h-1 {
-  height: 0.25rem;
-}
-
 .h-10 {
   height: 2.5rem;
 }
@@ -677,10 +697,6 @@ video {
 
 .h-8 {
   height: 2rem;
-}
-
-.w-0 {
-  width: 0px;
 }
 
 .w-44 {
@@ -727,6 +743,10 @@ video {
   justify-content: space-between;
 }
 
+.gap-y-6 {
+  row-gap: 1.5rem;
+}
+
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
@@ -755,10 +775,6 @@ video {
   overflow: hidden;
 }
 
-.rounded-md {
-  border-radius: 0.375rem;
-}
-
 .border-2 {
   border-width: 2px;
 }
@@ -771,6 +787,10 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.p-0 {
+  padding: 0px;
 }
 
 .p-4 {
@@ -866,42 +886,59 @@ video {
   transition-duration: 150ms;
 }
 
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .duration-200 {
   transition-duration: 200ms;
 }
 
-/* Mobile-Desktop Nav */
+/* Navigation Styles */
 
-.topnav__menu {
-  position: fixed;
-  inset: 0;
-  padding: 1.5rem;
-  background-color: blue;
-  translate: 100vw 0;
-  transition: translate 0.5s ease-in-out;
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.topnav__open[aria-expanded='true'] {
-  + .topnav__menu {
-    translate: 0;
+.topnav__links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (max-width: 48em) {
+  .topnav__menu {
+    position: fixed;
+    inset: 0;
+    padding: 3rem 1.5rem;
+    background-color: black;
+    translate: 100vw 0;
+    transition: translate 0.5s ease-in-out;
   }
+
+  .topnav__links {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.topnav__close {
+  display: block;
+  margin-inline-start: auto;
+  margin-bottom: 8rem;
+}
+
+.topnav__open[aria-expanded=true] + .topnav__menu {
+  translate: 0;
 }
 
 @media (prefers-reduced-motion) {
-  .topnav__open[aria-expanded='true'] {
-    + .topnav__menu {
-      opacity: 1;
-    }
+  .topnav__open[aria-expanded=true] + .topnav__menu {
+    opacity: 1;
   }
 }
 
-@media (width < 48rem) and (prefers-reduced-motion) {
+/* handle menu animation for users w/animations disabled */
+
+@media (width < 48em) and (prefers-reduced-motion) {
   .topnav__menu {
     translate: 0;
     opacity: 0;
@@ -909,29 +946,14 @@ video {
   }
 }
 
-.topnav__close {
-  display: block;
-  margin-inline-start: auto;
-  margin-block-end: 8rem;
-}
-
-.topnav__links {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: start;
-  margin: 0;
-  padding: 0;
-}
-
-.hero-section {
+.header {
   background-image: url('../images/desktop/image-hero.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-@media (max-width: 576px) {
-  .hero-section {
+@media (max-width: 48rem) {
+  .header {
     background-image: url('../images/mobile/image-hero.jpg');
     background-position: center;
   }
@@ -1015,10 +1037,6 @@ video {
   }
 }
 
-.group:hover .group-hover\:w-full {
-  width: 100%;
-}
-
 .group:hover .group-hover\:scale-110 {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
@@ -1035,6 +1053,10 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:static {
+    position: static;
+  }
+
   .md\:absolute {
     position: absolute;
   }
@@ -1086,6 +1108,10 @@ video {
 
   .md\:items-start {
     align-items: flex-start;
+  }
+
+  .md\:items-center {
+    align-items: center;
   }
 
   .md\:justify-end {
@@ -1164,4 +1190,3 @@ video {
     border-color: rgb(239 246 255 / var(--tw-border-opacity));
   }
 }
-
