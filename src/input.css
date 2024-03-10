@@ -8,62 +8,68 @@
   }
 }
 
-
-
-/* hamburger mobile menu */
-.hamburger {
-  cursor: pointer;
-  width: 24px;
-  height: 24px;
-  transition: all 0.25s;
-  position: relative;
+/* Navigation Styles */
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.hamburger-top,
-.hamburger-middle,
-.hamburger-bottom {
-  position: absolute;
-  width: 24px;
-  height: 2px;
-  top: 0;
-  left: 0;
-  background: #fff;
-  transform: rotate(0);
-  transition: all 0.5s;
+.topnav__links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
 }
 
-.hamburger-middle {
-  transform: translateY(7px);
+@media (max-width: 48em) {
+  .topnav__menu {
+    position: fixed;
+    inset: 0;
+    padding: 3rem 1.5rem;
+    background-color: black;
+    translate: 100vw 0;
+    transition: translate 0.5s ease-in-out;
+  }
+  .topnav__links {
+    flex-direction: column;
+    align-items: start;
+  }
 }
 
-.hamburger-bottom {
-  transform: translateY(14px);
+.topnav__close {
+  display: block;
+  margin-inline-start: auto;
+  margin-bottom: 8rem;
 }
 
-.open {
-  transform: rotate(90deg);
+.topnav__open[aria-expanded=true] + .topnav__menu {
+  translate: 0;
 }
 
-.open .hamburger-top {
-  transform: rotate(45deg) translateY(6px) translateX(6px);
+@media (prefers-reduced-motion) {
+  .topnav__open[aria-expanded=true] + .topnav__menu {
+    opacity: 1;
+  }
 }
 
-.open .hamburger-middle {
-  display: none;
+/* handle menu animation for users w/animations disabled */
+@media (width < 48em) and (prefers-reduced-motion) {
+  .topnav__menu {
+    translate: 0;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+  }
 }
 
-.open .hamburger-bottom {
-  transform: rotate(-45deg) translateY(6px) translateX(-6px);
-}
 
-.hero-section {
+.header {
   background-image: url('../images/desktop/image-hero.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-@media (max-width: 576px) {
-  .hero-section {
+@media (max-width: 48rem) {
+  .header {
     background-image: url('../images/mobile/image-hero.jpg');
     background-position: center;
   }
@@ -80,4 +86,3 @@
 .image-title {
   @apply absolute px-6 duration-200 w-52 bottom-4 text-2xl font-light text-white uppercase md:text-[32px] md:bottom-8 md:px-10 group-hover:text-black;
 }
-
