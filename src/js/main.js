@@ -3,10 +3,12 @@ const btnClose = document.querySelector('#btnClose');
 const media = window.matchMedia('(width < 48em)');
 const topNavMenu = document.querySelector('.topnav__menu');
 const body = document.querySelector('body');
+const copyYear = document.querySelector('#year');
+const currentYear = new Date().getFullYear();
 
+copyYear.textContent = currentYear;
 
 function openMobileMenu() {
-  console.log('open button clicked');
   btnOpen.setAttribute('aria-expanded', 'true');
   topNavMenu.removeAttribute('inert');
   topNavMenu.removeAttribute('style');
@@ -15,7 +17,6 @@ function openMobileMenu() {
 }
 
 function closeMobileMenu() {
-  console.log('close button clicked');
   btnOpen.setAttribute('aria-expanded', 'false');
   topNavMenu.setAttribute('inert', '');
   bodyScrollLockUpgrade.enableBodyScroll(body);
@@ -29,12 +30,10 @@ function closeMobileMenu() {
 function setupTopNav(e) {
   if (e.matches) {
     // is mobile
-    console.log('is mobile');
     topNavMenu.setAttribute('inert', '');
     topNavMenu.style.transition = 'none';
   } else {
     // is tablet/desktop
-    console.log('is desktop');
     closeMobileMenu();
     topNavMenu.removeAttribute('inert');
   }

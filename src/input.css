@@ -61,7 +61,6 @@
   }
 }
 
-
 .header {
   background-image: url('../images/desktop/image-hero.jpg');
   background-repeat: no-repeat;
@@ -84,5 +83,5 @@
 }
 
 .image-title {
-  @apply absolute px-6 duration-200 w-52 bottom-4 text-2xl font-light text-white uppercase md:text-[32px] md:bottom-8 md:px-10 group-hover:text-black;
+  @apply absolute px-6 duration-200 w-52 bottom-4 text-2xl font-light text-white uppercase md:text-[32px] md:bottom-8 md:w-full md:px-10 group-hover:text-black;
 }
