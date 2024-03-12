@@ -39,30 +39,45 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
+- Flexbox
 - [Tailwind CSS](https://tailwindcss.com/)
 
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Honestly, outside of some obscure tutorial, this is probably the first time I've ever used the window.matchMedia() method. Setting it up here along with the 'inert' attribute was an interesting approach that came out of Jessica Chan's YouTube tutorial (see below) and worked great for the problem of auto-closing an open mobile nav when switching to a wider screen.
+```js
+const media = window.matchMedia('(width < 48em)');
 
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
+function setupTopNav(e) {
+  if (e.matches) {
+    // is mobile
+    topNavMenu.setAttribute('inert', '');
+    topNavMenu.style.transition = 'none';
+  } else {
+    // is tablet/desktop
+    closeMobileMenu();
+    topNavMenu.removeAttribute('inert');
+  }
 }
+
+media.addEventListener('change', function (e) {
+  setupTopNav(e);
+});
 ```
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Coder Coder](https://youtu.be/pBv7igaxfQE) - Jessica Chan recently published an excellent tutorial on building an accessible hamburger menu. This video helped me tremendously in adapting my original nav menu to something that incorporates more accessibility features and generally just works better. She's using SCSS in this video, but I chose to simply add the necessary vanilla CSS and JS with this project, incorporating my existing Tailwind code. I'd imagine I'll keep coming back to this navigation code frequently to build better navs for other projects.
 
 ## Author
 
 - Website - [mattpahuta.com](https://www.mattpahuta.com)
 - LinkedIn - [LinkedIn](www.linkedin.com/in/mattpahuta)
+- Frontend Mentor - [@mattpahuta](https://www.frontendmentor.io/profile/MattPahuta)
 
 
 ## Acknowledgments
 
-- [Brad Traversy](https://www.traversymedia.com/) - I completed this challenge after working through Brad Traversy's excellent [Tailwind from Scratch](https://tailwindfromscratch.com/) course, making some additional alterations along the way, particularly with the desktop/mobile navigation and semantic HTML. But Brad's course is excellent and provides everything you need to know to become proficient with Tailwind.
+- [Brad Traversy](https://www.traversymedia.com/) - I completed this challenge after working through Brad Traversy's excellent [Tailwind from Scratch](https://tailwindfromscratch.com/) course, making some additional alterations along the way, particularly with the desktop/mobile navigation (see below) and semantic HTML. But Brad's course is excellent and provides everything I needed in order to get off the ground and using Tailwind more confidently.
+- [Coder Coder](https://coder-coder.com/) - Again, a big thanks to Jessica's excellent video on building a semantically correct navigation menu. She's an excellent resource to all things CSS, SCSS, JS, and more. 
