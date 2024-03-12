@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/responsive-landing-page-using-tailwind-css-jPm9zuCn1O)
 - [Live Site URL](https://loopstudios-landing-page-psi-pearl.vercel.app/)
 
 ## My process
